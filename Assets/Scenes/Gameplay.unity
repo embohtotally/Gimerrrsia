@@ -2525,7 +2525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &563709823
 Transform:
   m_ObjectHideFlags: 0
@@ -2535,7 +2535,7 @@ Transform:
   m_GameObject: {fileID: 563709822}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.66, y: 1.19, z: 0}
+  m_LocalPosition: {x: 3.69, y: -0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8623,7 +8623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1358420059545715420, guid: ad60d6d81ab4668428c66592391db0a6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2167882406650059655, guid: ad60d6d81ab4668428c66592391db0a6, type: 3}
       propertyPath: hpSlider
@@ -8951,7 +8951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7741811075454533971, guid: f9fb1142d9dc04848ad43832eac90334, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9102,7 +9102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7908667402358733887, guid: 436f9ec71b495b347acea599a2af07b9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9131,7 +9131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4390932543138115532, guid: df193c7d30778af4bbe6eb549c80d103, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7192561536941883599, guid: df193c7d30778af4bbe6eb549c80d103, type: 3}
       propertyPath: m_Pivot.x
@@ -9232,7 +9232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3692007092075435616, guid: c10edcc146e3c5d458dc3a0ad729f904, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4608144127822909243, guid: c10edcc146e3c5d458dc3a0ad729f904, type: 3}
       propertyPath: hpSlider

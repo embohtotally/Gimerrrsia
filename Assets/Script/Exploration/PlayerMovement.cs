@@ -21,6 +21,11 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    private void OnEnable()
+    {
+        rb.simulated = true;
+    }
+
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
