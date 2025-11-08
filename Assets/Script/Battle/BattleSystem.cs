@@ -56,6 +56,8 @@ public class BattleSystem : MonoBehaviour
     public Sprite delightIcon;
     public Sprite griefIcon;
     public Sprite temperIcon;
+    public Image transitionImage;
+    public Animation transitionAnim;
 
     private MonsterSkill lastEnemySkillUsed;
 
@@ -66,7 +68,7 @@ public class BattleSystem : MonoBehaviour
 
         // Add a random offset to prevent stacking
         float randomXOffset = Random.Range(-40f, 40f);
-        float yOffset = 30f; // <-- This moves the popup up
+        //float yOffset = 30f; // <-- This moves the popup up
         Vector3 spawnPosition = screenPosition + new Vector3(randomXOffset, 0, 0);
 
         // Create an instance of the popup prefab
@@ -106,8 +108,8 @@ public class BattleSystem : MonoBehaviour
 
     void Start()
     {
-        
         battleStage.SetActive(false);
+        transitionImage.enabled = false;
         if (battleBackground != null) battleBackground.SetActive(false);
         if (battleCamera != null) battleCamera.gameObject.SetActive(false);
         state = BattleState.INACTIVE;
@@ -119,7 +121,8 @@ public class BattleSystem : MonoBehaviour
         Rigidbody2D playerRigid = originalPlayer.GetComponent<Rigidbody2D>();
         playerRigid.simulated = false;
 
-        //line code aktifkan transisi
+        transitionImage.enabled = true;
+        transitionAnim.Play("FadeInTrans");
         yield return new WaitForSeconds(2f); //sesuaikan dengan lama transisi
 
         if (outcomeText != null) outcomeText.gameObject.SetActive(false);
@@ -133,6 +136,7 @@ public class BattleSystem : MonoBehaviour
         }
 
         // --- Hide Map, Show Battle ---
+        transitionImage.enabled = false;
         if (mindscapeStage != null) mindscapeStage.SetActive(false);
         if (explorationCamera != null) explorationCamera.gameObject.SetActive(false);
         battleStage.SetActive(true);
@@ -429,9 +433,12 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
 
         //linecode aktifkan transisi
-        Debug.Log("Transisi Keluar Start");
+
+        transitionImage.enabled = true;
+        transitionAnim.Play("FadeOutTrans");
+
         yield return new WaitForSeconds(1f); //samakan lama transisi keluar
-        Debug.Log("Transisi Keluar End");
+        //Debug.Log("Transisi Keluar End");
 
         // 3. Restore the original exploration lighting
         if (globalLight != null)
@@ -455,6 +462,7 @@ public class BattleSystem : MonoBehaviour
         {
             playerOnMap.enabled = true;
         }
+        transitionImage.enabled = false;
 
         // 7. Reset the battle system's state to be ready for the next fight
         state = BattleState.INACTIVE;
