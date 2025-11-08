@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private Vector2 movement;
     private float lastMoveX;
-    private float lastMoveY;
+    //private float lastMoveY;
 
     void Start()
     {
@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        //movement.y = Input.GetAxisRaw("Vertical");
 
         if (animator != null)
         {
@@ -33,14 +33,14 @@ public class PlayerMovement : MonoBehaviour
             if (movement.sqrMagnitude > 0.01f)
             {
                 lastMoveX = movement.x;
-                lastMoveY = movement.y;
+                //lastMoveY = movement.y;
                 animator.SetFloat("Horizontal", movement.x);
-                animator.SetFloat("Vertical", movement.y);
+                //animator.SetFloat("Vertical", movement.y);
             }
             else
             {
                 animator.SetFloat("Horizontal", lastMoveX);
-                animator.SetFloat("Vertical", lastMoveY);
+                //animator.SetFloat("Vertical", lastMoveY);
             }
         }
     }
