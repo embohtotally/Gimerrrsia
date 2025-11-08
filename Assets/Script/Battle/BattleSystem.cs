@@ -116,9 +116,11 @@ public class BattleSystem : MonoBehaviour
     public void StartBattle(GameObject enemyToSpawn, PlayerMovement originalPlayer)
     {
         this.playerOnMap = originalPlayer;
+        Rigidbody2D playerRigid = originalPlayer.GetComponent<Rigidbody2D>();
+        playerRigid.simulated = false;
         if (outcomeText != null) outcomeText.gameObject.SetActive(false);
-        AudioManager.instance.PlayMusic("Battle"); 
-        AudioManager.instance.MusicVolume(1.0f); 
+        //AudioManager.instance.PlayMusic("Battle"); 
+        //AudioManager.instance.MusicVolume(1.0f); 
         // --- NEW LIGHTING LOGIC ---
         if (globalLight != null)
         {
@@ -448,8 +450,8 @@ public class BattleSystem : MonoBehaviour
         // 7. Reset the battle system's state to be ready for the next fight
         state = BattleState.INACTIVE;
 
-        AudioManager.instance.PlayMusic("Theme");
-        AudioManager.instance.MusicVolume(1.0f);  // 50% volume
+        //AudioManager.instance.PlayMusic("Theme");
+        //AudioManager.instance.MusicVolume(1.0f);  // 50% volume
     }
 
 
