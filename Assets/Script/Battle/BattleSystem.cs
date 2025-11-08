@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.Rendering.Universal;
-using TMPro; // Make sure this is here
+using TMPro; //Make sure this is here
 
 public enum BattleState { INACTIVE, START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
@@ -104,7 +104,6 @@ public class BattleSystem : MonoBehaviour
             popup.SetupAsDodge();
         }
     }
-
 
     void Start()
     {
