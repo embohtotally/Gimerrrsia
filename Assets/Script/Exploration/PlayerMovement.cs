@@ -9,13 +9,13 @@ public class PlayerMovement : MonoBehaviour
     public BattleSystem battleSystem;
 
     // Private variables
-    private Rigidbody2D rb;
+    [SerializeField] Rigidbody2D rb;
     private Animator animator;
     private Vector2 movement;
     private float lastMoveX;
     //private float lastMoveY;
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        rb.simulated = true;
+        if (rb.simulated == false) rb.simulated = true;
     }
 
     void Update()
@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
             if (manifestation != null && manifestation.battlePrefab != null)
             {
                 this.enabled = false; // Stop moving
-                battleSystem.StartBattle(manifestation.battlePrefab, this);
+                StartCoroutine(battleSystem.StartBattle(manifestation.battlePrefab, this));
                 Destroy(other.gameObject, 3f);
             }
         }

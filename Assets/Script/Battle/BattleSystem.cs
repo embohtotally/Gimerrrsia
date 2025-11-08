@@ -113,11 +113,15 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.INACTIVE;
     }
 
-    public void StartBattle(GameObject enemyToSpawn, PlayerMovement originalPlayer)
+    public IEnumerator StartBattle(GameObject enemyToSpawn, PlayerMovement originalPlayer)
     {
         this.playerOnMap = originalPlayer;
         Rigidbody2D playerRigid = originalPlayer.GetComponent<Rigidbody2D>();
         playerRigid.simulated = false;
+
+        //line code aktifkan transisi
+        yield return new WaitForSeconds(2f); //sesuaikan dengan lama transisi
+
         if (outcomeText != null) outcomeText.gameObject.SetActive(false);
         //AudioManager.instance.PlayMusic("Battle"); 
         //AudioManager.instance.MusicVolume(1.0f); 
@@ -423,6 +427,11 @@ public class BattleSystem : MonoBehaviour
             outcomeText.gameObject.SetActive(true);
         // 2. Wait for a few seconds so the player can see the message and animation
         yield return new WaitForSeconds(2.5f);
+
+        //linecode aktifkan transisi
+        Debug.Log("Transisi Keluar Start");
+        yield return new WaitForSeconds(1f); //samakan lama transisi keluar
+        Debug.Log("Transisi Keluar End");
 
         // 3. Restore the original exploration lighting
         if (globalLight != null)
