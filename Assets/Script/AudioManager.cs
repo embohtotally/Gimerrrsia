@@ -105,11 +105,13 @@ public class AudioManager : MonoBehaviour
     {
         if (musicSource != null)
             musicSource.volume = volume;
+        PlayerPrefs.SetFloat(MUSIC_VOLUME_KEY, volume);
     }
 
     public void SFXVolume(float volume)
     {
         if (sfxSource != null)
             sfxSource.volume = volume;
+        PlayerPrefs.SetFloat(SFX_VOLUME_KEY, volume);
     }
 }

@@ -5083,9 +5083,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: 9c37ec695101cd14a9bdf0af60d98fea, type: 3}
+    clip: {fileID: 8300000, guid: 5bbc56fca8f789140b5bbcf237cab8a9, type: 3}
   - name: Battle
     clip: {fileID: 8300000, guid: 0ec31f547d558544ca1fe716e0bd335a, type: 3}
+  - name: Gameplay
+    clip: {fileID: 8300000, guid: 877aa67d151139a45a278e41cfd1e1e9, type: 3}
   sfxSounds:
   - name: Essence
     clip: {fileID: 8300000, guid: de7ff21e0a441bf4b834d3d0e46bc2f6, type: 3}
