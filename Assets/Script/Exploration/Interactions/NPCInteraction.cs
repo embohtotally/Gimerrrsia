@@ -1,9 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-
 public class NPCInteraction : MonoBehaviour
 {
     [Header("Interaction Settings")]
@@ -48,6 +47,8 @@ public class NPCInteraction : MonoBehaviour
     private Coroutine typingCoroutine;
     private Queue<DialogueLine> dialogueQueue;
 
+    private float previousTimeScale = 1f; // ✅ Store previous time scale
+
     private void Start()
     {
         dialogueQueue = new Queue<DialogueLine>();
@@ -73,12 +74,12 @@ public class NPCInteraction : MonoBehaviour
         if (isSkipPanelOpen) return;
 
         if (!isSkipPanelOpen && isPlayerInRange &&
-    (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Space) ||
-     (isDialogueActive && Input.GetMouseButtonDown(0))))
+            (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Space) ||
+            (isDialogueActive && Input.GetMouseButtonDown(0))))
         {
             if (!isDialogueActive)
             {
-                if (Input.GetKeyDown(KeyCode.F)) // only F can start it
+                if (Input.GetKeyDown(KeyCode.F))
                     StartDialogue();
             }
             else
@@ -96,9 +97,10 @@ public class NPCInteraction : MonoBehaviour
                 }
             }
         }
-
+        
         if (isPatrolling)
         {
+            // ✅ Still use unscaledDeltaTime since timeScale might be 0 during dialogue
             float step = patrolSpeed * Time.unscaledDeltaTime;
             transform.position = Vector3.MoveTowards(transform.position, patrolPoint.position, step);
 
@@ -123,7 +125,10 @@ public class NPCInteraction : MonoBehaviour
             return;
         }
 
+        // ✅ Freeze time
+        previousTimeScale = Time.timeScale;
         Time.timeScale = 0f;
+
         isDialogueActive = true;
         dialogueQueue.Clear();
 
@@ -189,9 +194,10 @@ public class NPCInteraction : MonoBehaviour
     {
         Debug.Log("Dialogue ended.");
 
-        Time.timeScale = 1f;
-        isDialogueActive = false;
+        // ✅ Restore time
+        Time.timeScale = previousTimeScale;
 
+        isDialogueActive = false;
         dialogueUI.SetActive(false);
         if (skipButton != null) skipButton.SetActive(false);
         if (blurPanel != null) blurPanel.SetActive(false);
@@ -293,6 +299,7 @@ public class NPCInteraction : MonoBehaviour
         isTyping = true;
         dialogueText.text = "";
 
+        // ✅ Typing uses WaitForSecondsRealtime so it ignores timeScale = 0
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
