@@ -38,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: dc0134b89b806114b8c73fb9975f4737, type: 2}
     - target: {fileID: 5043833939751867292, guid: e00ca8a72dbf93541b1447de5e873763, type: 3}
       propertyPath: m_SortingOrder
-      value: 11
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5859302866440230394, guid: e00ca8a72dbf93541b1447de5e873763, type: 3}
       propertyPath: m_Pivot.x

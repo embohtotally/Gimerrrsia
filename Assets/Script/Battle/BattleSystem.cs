@@ -22,6 +22,7 @@ public class BattleSystem : MonoBehaviour
     public float lightFadeDuration = 0.75f; 
     [Header("Prefabs & Spawn Points")]
     public GameObject playerPrefab;
+    public Sprite playerBattleSprite;
     public Transform playerSpawnPoint;
     public Transform enemySpawnPoint;
 
@@ -119,7 +120,15 @@ public class BattleSystem : MonoBehaviour
         this.playerOnMap = originalPlayer;
         Rigidbody2D playerRigid = originalPlayer.GetComponent<Rigidbody2D>();
         playerRigid.simulated = false;
-
+        if (this.playerOnMap != null)
+        {
+            this.playerOnMap.enabled = false; // Disables PlayerMovement script
+            Animator playerAnim = this.playerOnMap.GetComponent<Animator>();
+            if (playerAnim != null)
+            {
+                playerAnim.enabled = false; // Disables the Animator
+            }
+        }
         transitionImage.enabled = true;
         transitionAnim.Play("FadeInTrans");
         yield return new WaitForSeconds(2f); //sesuaikan dengan lama transisi
@@ -183,6 +192,12 @@ public class BattleSystem : MonoBehaviour
         playerStats.hpSlider = this.playerHpSlider;
         playerStats.SetupHpSlider();
         playerStats.UpdateSpUI();
+
+        SpriteRenderer playerRenderer = playerGO.GetComponent<SpriteRenderer>();
+        if (playerRenderer != null && playerBattleSprite != null)
+        {
+            playerRenderer.sprite = playerBattleSprite;
+        }
 
         enemyGO = Instantiate(enemyToSpawn, enemySpawnPoint.position, Quaternion.identity);
         enemyStats = enemyGO.GetComponent<CharacterStats>();
@@ -425,6 +440,17 @@ public class BattleSystem : MonoBehaviour
             if (playerStats != null && playerStats.animator != null)
                 playerStats.animator.SetTrigger("Die");
         }
+
+        if (playerOnMap != null)
+        {
+            playerOnMap.enabled = true; // Re-enables PlayerMovement
+            Animator playerAnim = playerOnMap.GetComponent<Animator>();
+            if (playerAnim != null)
+            {
+                playerAnim.enabled = true; // Re-enables the Animator
+            }
+        }
+        
 
         if (outcomeText != null)
             outcomeText.gameObject.SetActive(true);

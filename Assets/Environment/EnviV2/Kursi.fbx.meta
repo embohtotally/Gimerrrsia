@@ -3,7 +3,12 @@ guid: c7ce4a29214051c4b9f8b94ceb8531ff
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: T_Chair_BaseColor
+    second: {fileID: 2800000, guid: 226a0c4b067628e4aa5f6128019d7f54, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -5,10 +5,15 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blinn1.001
+    second: {fileID: 2100000, guid: 882d4aebcf69fd9439818be4057a8dff, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: blinn1_Normal
-    second: {fileID: 2800000, guid: c9d166c94743efc4db86b4f76e168e5c, type: 3}
+    second: {fileID: 2800000, guid: db5c976d61033454c861ca20b000c7e9, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
