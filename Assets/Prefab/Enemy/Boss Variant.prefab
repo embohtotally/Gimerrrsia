@@ -45,15 +45,15 @@ PrefabInstance:
       value: 0.844
       objectReference: {fileID: 0}
     - target: {fileID: 4608144127822909243, guid: c10edcc146e3c5d458dc3a0ad729f904, type: 3}
-      propertyPath: skills.Array.data[0]
+      propertyPath: 'skills.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: c58ed885fc89d844c8f8d30623747972, type: 2}
     - target: {fileID: 4608144127822909243, guid: c10edcc146e3c5d458dc3a0ad729f904, type: 3}
-      propertyPath: skills.Array.data[1]
+      propertyPath: 'skills.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: 8b04aa70e32e0d941972b6c2c6385831, type: 2}
     - target: {fileID: 4608144127822909243, guid: c10edcc146e3c5d458dc3a0ad729f904, type: 3}
-      propertyPath: skills.Array.data[2]
+      propertyPath: 'skills.Array.data[2]'
       value: 
       objectReference: {fileID: 11400000, guid: 2733b720746d48149ac9fc61b0d64094, type: 2}
     - target: {fileID: 4608144127822909243, guid: c10edcc146e3c5d458dc3a0ad729f904, type: 3}
@@ -65,19 +65,19 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4608144127822909243, guid: c10edcc146e3c5d458dc3a0ad729f904, type: 3}
-      propertyPath: weaknesses.Array.data[0]
+      propertyPath: 'weaknesses.Array.data[0]'
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4608144127822909243, guid: c10edcc146e3c5d458dc3a0ad729f904, type: 3}
-      propertyPath: weaknesses.Array.data[1]
+      propertyPath: 'weaknesses.Array.data[1]'
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4608144127822909243, guid: c10edcc146e3c5d458dc3a0ad729f904, type: 3}
-      propertyPath: resistances.Array.data[1]
+      propertyPath: 'resistances.Array.data[1]'
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4608144127822909243, guid: c10edcc146e3c5d458dc3a0ad729f904, type: 3}
-      propertyPath: resistances.Array.data[2]
+      propertyPath: 'resistances.Array.data[2]'
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7782784884025407843, guid: c10edcc146e3c5d458dc3a0ad729f904, type: 3}

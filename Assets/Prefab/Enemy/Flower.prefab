@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 882536396820846235, guid: 1e4b389f6328bdb4c81bec4dd6aec818, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6895495282096838205, guid: 0301e5ebf0af16347855f3fe485a204c, type: 3}
+    - target: {fileID: 882536396820846235, guid: 1e4b389f6328bdb4c81bec4dd6aec818, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -54,15 +58,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1769992694131396861, guid: 1e4b389f6328bdb4c81bec4dd6aec818, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1769992694131396861, guid: 1e4b389f6328bdb4c81bec4dd6aec818, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1769992694131396861, guid: 1e4b389f6328bdb4c81bec4dd6aec818, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1769992694131396861, guid: 1e4b389f6328bdb4c81bec4dd6aec818, type: 3}
       propertyPath: m_LocalPosition.x
@@ -118,7 +122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5165315980129288190, guid: 1e4b389f6328bdb4c81bec4dd6aec818, type: 3}
       propertyPath: m_Name
-      value: Slime Variant
+      value: Flower
       objectReference: {fileID: 0}
     - target: {fileID: 5431672982459115173, guid: 1e4b389f6328bdb4c81bec4dd6aec818, type: 3}
       propertyPath: maxHp
@@ -145,11 +149,11 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5431672982459115173, guid: 1e4b389f6328bdb4c81bec4dd6aec818, type: 3}
-      propertyPath: weaknesses.Array.data[0]
+      propertyPath: 'weaknesses.Array.data[0]'
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5431672982459115173, guid: 1e4b389f6328bdb4c81bec4dd6aec818, type: 3}
-      propertyPath: resistances.Array.data[0]
+      propertyPath: 'resistances.Array.data[0]'
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7527473722298424876, guid: 1e4b389f6328bdb4c81bec4dd6aec818, type: 3}

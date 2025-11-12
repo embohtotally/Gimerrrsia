@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2760916237819090266, guid: 436f9ec71b495b347acea599a2af07b9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3674829989744841532, guid: 436f9ec71b495b347acea599a2af07b9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -97,11 +101,11 @@ PrefabInstance:
       value: 0.402
       objectReference: {fileID: 0}
     - target: {fileID: 6993797001599214948, guid: 436f9ec71b495b347acea599a2af07b9, type: 3}
-      propertyPath: weaknesses.Array.data[0]
+      propertyPath: 'weaknesses.Array.data[0]'
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6993797001599214948, guid: 436f9ec71b495b347acea599a2af07b9, type: 3}
-      propertyPath: resistances.Array.data[0]
+      propertyPath: 'resistances.Array.data[0]'
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7908667402358733887, guid: 436f9ec71b495b347acea599a2af07b9, type: 3}

@@ -17,15 +17,15 @@ PrefabInstance:
       value: 0.396
       objectReference: {fileID: 0}
     - target: {fileID: 189441315340805026, guid: e00ca8a72dbf93541b1447de5e873763, type: 3}
-      propertyPath: skills.Array.data[0]
+      propertyPath: 'skills.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: dd1627e4251e0b442baabb258f60591b, type: 2}
     - target: {fileID: 189441315340805026, guid: e00ca8a72dbf93541b1447de5e873763, type: 3}
-      propertyPath: weaknesses.Array.data[0]
+      propertyPath: 'weaknesses.Array.data[0]'
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 189441315340805026, guid: e00ca8a72dbf93541b1447de5e873763, type: 3}
-      propertyPath: resistances.Array.data[0]
+      propertyPath: 'resistances.Array.data[0]'
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1039990217188391673, guid: e00ca8a72dbf93541b1447de5e873763, type: 3}
@@ -36,6 +36,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: dc0134b89b806114b8c73fb9975f4737, type: 2}
+    - target: {fileID: 5043833939751867292, guid: e00ca8a72dbf93541b1447de5e873763, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5859302866440230394, guid: e00ca8a72dbf93541b1447de5e873763, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
