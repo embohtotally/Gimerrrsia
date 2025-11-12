@@ -21,10 +21,10 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.297
+    m_Value: 0.358
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.333
+    m_Value: 0.382
   rounded:
     m_OverrideState: 0
     m_Value: 0
@@ -42,8 +42,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   intensity:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 0.217
   xMultiplier:
     m_OverrideState: 0
     m_Value: 1
@@ -71,7 +71,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.156
 --- !u!114 &-3350628614319555185
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -90,10 +90,10 @@ MonoBehaviour:
     m_Value: 10
   intensity:
     m_OverrideState: 1
-    m_Value: 0.134
+    m_Value: 0.031
   response:
     m_OverrideState: 1
-    m_Value: 0.332
+    m_Value: 0.157
   texture:
     m_OverrideState: 1
     m_Value: {fileID: 2800000, guid: 19a42ba507b14aa4d9bb25aaa05bdd8a, type: 3}
@@ -118,7 +118,7 @@ MonoBehaviour:
     m_Value: {r: 0.9547169, g: 0.5208516, b: 0.18553928, a: 1}
   balance:
     m_OverrideState: 1
-    m_Value: -12
+    m_Value: -17.3
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,10 +155,10 @@ MonoBehaviour:
   active: 1
   distance:
     m_OverrideState: 1
-    m_Value: 0.245
+    m_Value: 0.185
   cropToFit:
     m_OverrideState: 1
-    m_Value: 0.633
+    m_Value: 0.42
 --- !u!114 &4615752369287844108
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -177,10 +177,10 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.9
+    m_Value: 0.62
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.74
   scatter:
     m_OverrideState: 0
     m_Value: 0.7
@@ -227,4 +227,4 @@ MonoBehaviour:
     m_Value: {x: 0.96331304, y: 0.97015256, z: 1, w: -0.16032097}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 0.8867907, y: 0.92911506, z: 1, w: -0.12024051}
+    m_Value: {x: 0.8917343, y: 0.9212576, z: 1, w: -0.12024051}
