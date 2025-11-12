@@ -139,8 +139,7 @@ public class BattleSystem : MonoBehaviour
         // --- NEW LIGHTING LOGIC ---
         if (globalLight != null)
         {
-            originalLightIntensity = globalLight.intensity; // Save the original value
-            globalLight.intensity = 1f; // Set to 100% for battle
+            originalLightIntensity = globalLight.intensity; // Save the original value // Set to 100% for battle
         }
 
         // --- Hide Map, Show Battle ---
